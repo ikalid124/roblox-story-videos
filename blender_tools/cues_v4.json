@@ -1,0 +1,22 @@
+{
+  "captions": [
+    [1, 15, "in this world,"],
+    [16, 30, "she got *ONE*"],
+    [31, 47, "he got"],
+    [48, 60, "*FORTY-TWO*"],
+    [61, 77, "*WAIT.*"],
+    [78, 90, "that's not *fair*"],
+    [91, 103, "unless..."],
+    [104, 120, "*uh oh*"]
+  ],
+  "sfx": [
+    [1, "sfx/whoosh.wav", 0.5],
+    [14, "sfx/sad_wah.wav", 0.55],
+    [31, "sfx/whoosh.wav", 0.6],
+    [48, "sfx/laugh_hits.wav", 0.6],
+    [61, "sfx/boom.wav", 1.0],
+    [78, "sfx/pop.wav", 0.8],
+    [91, "sfx/boing.wav", 0.6],
+    [104, "sfx/sting.wav", 0.7]
+  ]
+}

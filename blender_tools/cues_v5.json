@@ -1,0 +1,81 @@
+{
+ "captions": [
+  [
+   9,
+   36,
+   "why do you have"
+  ],
+  [
+   37,
+   57,
+   "so many *balloons?*"
+  ],
+  [
+   89,
+   105,
+   "every balloon"
+  ],
+  [
+   106,
+   130,
+   "is a *sorry*"
+  ],
+  [
+   131,
+   155,
+   "somebody *owes* me."
+  ],
+  [
+   218,
+   230,
+   "then why"
+  ],
+  [
+   231,
+   257,
+   "do I only have"
+  ],
+  [
+   258,
+   285,
+   "*one?*"
+  ]
+ ],
+ "sfx": [
+  [
+   6,
+   "/mnt/user-data/uploads/Downloads/BalloonTest/voice/maya1.wav",
+   1.4
+  ],
+  [
+   86,
+   "/mnt/user-data/uploads/Downloads/BalloonTest/voice/ezra1.wav",
+   1.4
+  ],
+  [
+   214,
+   "/mnt/user-data/uploads/Downloads/BalloonTest/voice/maya2.wav",
+   1.4
+  ],
+  [
+   82,
+   "sfx/whoosh.wav",
+   0.45
+  ],
+  [
+   182,
+   "sfx/whoosh.wav",
+   0.45
+  ],
+  [
+   112,
+   "sfx/ding.wav",
+   0.35
+  ],
+  [
+   291,
+   "sfx/sad_wah.wav",
+   0.5
+  ]
+ ]
+}

@@ -1,0 +1,12 @@
+import os, sys, subprocess
+BASE = os.path.join(os.path.expanduser("~"), "Downloads", "BalloonTest")
+out = os.path.join(BASE, "voice", "placeholder"); os.makedirs(out, exist_ok=True)
+LINES = [(1, 'In this world, every sorry you owe becomes a balloon tied to your wrist.'), (2, 'Say sorry, and it pops.'), (3, 'Most people carry two or three. Grandpa Joe carries eleven, so he ties himself to the mailbox at night.'), (4, 'The principal wears ankle weights.'), (5, 'On picture day, the photographer stands on a ladder.'), (6, "And if you ever float? Everyone knows what that means. You're a bad person."), (7, 'Maya has had one balloon since she was six. Gray. It never pops. No matter who she says sorry to.'), (8, "Then there's Ezra. Forty-two balloons. He floats to school."), (9, 'Kids throw paper at him from the second floor. The teacher ties him to the radiator.'), (10, "Even Maya called him a bully. She'd never even talked to him."), (11, "Then, on the field trip to the cliffs, the wind picked up... and Ezra's rope snapped."), (12, 'He shot straight up, over the edge, toward the ocean.'), (13, 'Everyone screamed, "Say sorry, Ezra! Pop them!"'), (14, '"I\'ve tried! Every single day! They don\'t pop!"'), (15, "That's when Maya looked up at her gray balloon. Six years. Never popped."), (16, 'Because her dad never said sorry for leaving.'), (17, "The balloons were never the sorrys you owe. They're the sorrys people owe you."), (18, 'Maya turned to the class. "We did this. Every name we called him. Every paper we threw."'), (19, 'Silence. Then Jake whispered, "Sorry, Ezra." Pop.'), (20, '"Sorry." Pop. "I\'m sorry, Ezra." Pop. Pop. Pop.'), (21, 'Forty-two sorrys later, Ezra floated down, right into their arms.'), (22, "Now Ezra walks to school. And Maya's gray balloon? She still has it. But she doesn't hold it alone anymore."), (23, "Like and subscribe... or that's one more balloon for me.")]
+for n, t in LINES:
+    p = os.path.join(out, "ph_%02d.wav" % n)
+    tt = t.replace("'", "''")
+    ps = ("Add-Type -AssemblyName System.Speech; $s = New-Object System.Speech.Synthesis.SpeechSynthesizer; "
+          "try { $s.SelectVoice('Microsoft David Desktop') } catch {}; $s.Rate = 1; "
+          "$s.SetOutputToWaveFile('%s'); $s.Speak('%s'); $s.Dispose()" % (p, tt))
+    subprocess.run(["powershell", "-NoProfile", "-Command", ps], timeout=60, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+open(os.path.join(out, "done.txt"), "w").write("ok")
