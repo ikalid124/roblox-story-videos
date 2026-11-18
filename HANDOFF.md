@@ -47,7 +47,11 @@ Gaps, biggest first: plain primitive world vs a real textured Roblox town (half-
 - `compare/`: comparison images and metrics JSON.
 - `balloons_full_v1.mp4`: the finished v1.
 
-## Desktop folder (copy this to the new desktop too)
+## Desktop folder (NOT available: the old desktop is gone)
+
+The old desktop will not be back, so `balloon_film.blend`, the face atlas PNGs and the rendered frames are lost. That is fine: v2 rebuilds the sets and cast from real Roblox assets anyway. Faces can be regenerated with `blender_tools/faces.py`, and the cast/clothing logic is in `avatar.py`, `clothing.py`, `rbxt.py`. Everything else (script, Adam audio, timing map, cues, SFX, caption pipeline) is in this repo. On the new desktop, create `Downloads\BalloonTest\tools` and copy `blender_tools/` into it so the old script paths still work.
+
+### What the old folder contained (for reference)
 
 `C:\Users\Kalid Ibrahim\Downloads\BalloonTest\` holds `balloon_film.blend` (final scene), `faces\` (face atlases faces4_<Name>.png), `sfx\`, `voice\`, `tools\` (same scripts as blender_tools), and `frames_film\` (3,164 rendered frames, optional). On a new desktop the scripts expect this same path under the new user's home, so keep the folder name `Downloads\BalloonTest`.
 
