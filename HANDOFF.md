@@ -40,6 +40,18 @@ Gaps, biggest first: plain primitive world vs a real textured Roblox town (half-
 4. One-word white captions with black outline; add a quiet music bed; master to about -14 LUFS.
 5. Keep the same script, Adam audio and timing map.
 
+## Reference reel
+
+`reference/bonk_films3_reference_screenrec.mp4` is Kalid's screen recording of the reference reel (Instagram UI included, downscaled to 646 wide). Re-run the comparison on any new render with:
+
+```
+ffmpeg -i reference/bonk_films3_reference_screenrec.mp4 -vf "fps=30,crop=iw*0.853:ih*0.64:0:ih*0.129" ref_crop.mp4
+ffmpeg -i NEW.mp4 -vf "crop=iw*0.7:ih*0.64:iw*0.09:ih*0.13" new_crop.mp4
+NW=378 python3 film/analyze.py ref_crop.mp4 ref ; NW=378 python3 film/analyze.py new_crop.mp4 new
+```
+
+Goal for v2: match or beat the reference column in the comparison table.
+
 ## Files in this bundle
 
 - `film/`: caption/mix script (`caption_film.py`, usage: `python3 caption_film.py <frames_dir> <out.mp4> 30 cues_film_adam.json`, run from the film folder), cue files (`cues_film_adam.json` = 122 caption chunks + 54 SFX cues + Adam at frame 3), `timing_s1.json` (23 lines with start/end frames at 30 fps plus a mouth open/closed RLE for lip sync; Blender frame = timing index + 1), `adam/adam.mp3`, `sfx/` (original synthesized SFX), `analyze.py` (video metrics used for the comparison), `make_cues.py`.
